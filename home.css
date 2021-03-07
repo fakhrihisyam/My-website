@@ -1,0 +1,118 @@
+body{
+	background: gold;
+}
+#tampilan{
+	background: white;
+	width: 1000px;
+	height: 700px;
+	margin: auto;
+}
+#header{
+	background: yellow;
+	height: 200px;
+	width: 1000px;
+	overflow: hidden;
+}
+#teks{
+	background: gold;
+	height: 20px;
+	width: 1000px;
+	overflow: hidden;
+}
+#menu{
+	background: #9999ff;
+	height: 30px;
+	width: 1000px;
+
+}
+a{
+	text-decoration: none;
+}
+#menu ul {
+	padding: 0px;
+	margin: 0px;
+}
+#menu ul li{
+	display: margin-left: 20px; line-height: 30px;
+	font-size: 18px; border: 1px solid green;
+	padding: 3px 15px; border-radius: 10px;background: green;
+
+}
+#menu ul li :hover{
+	background: white;
+}
+#menu ul li a{ color: black; }
+#isi{
+	background: #a9a9a9;
+	height: 450px;
+	width: 1000px;
+
+}
+#kiri{
+	background: darkgray;
+	height: 450px;
+	width: 700px;
+	float: left;
+
+}
+#kanan{
+	background: green;
+	height: 450px;
+	width: 300px;
+	float: left;
+
+}
+#footer{
+	background: white;
+	height: 20px;
+	width: 1000px;
+	overflow: hidden;
+
+}
+@keyframes slider{
+	0%{
+		left: 0%:;
+	}
+	20%{
+		left: 0%:;
+	}
+	25%{
+		left: -100%:;
+	}
+	45%{
+		left: -100%:;
+	}
+	50%{
+		left: -200%:; 
+	}
+	70%{
+		left: -200%:;
+	}
+	75%{
+		left: -300%:;
+	}
+	95%{
+		left: -300%:;
+	}
+	100%{
+		left: -400%:;
+	}
+
+}
+#slider{
+	overflow: hidden;
+}
+#slider figure img{
+	width: 20%;
+	float: left;	
+}
+#slider figure{
+	position: relative;
+	width: 600%;
+	margin: 0;
+	left: 0;
+	text-align: left;
+	font-size: 0;
+	animation: 20s slider infinite;
+
+}
