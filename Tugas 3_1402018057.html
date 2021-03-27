@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="utf-8">
+<script type="text/javascript">
+
+	var namaanda;
+	var time;
+	var day = new Date();
+	var waktu = day.getHours();
+	namaanda = window.prompt("Masukkan Nama Anda");
+
+		if (waktu < 12) 
+			time = "Selamat Pagi,";
+		if (waktu >=12) {
+			waktu = waktu -12;
+		if (waktu < 6)
+			time = "Selamat Siang,";
+		if (waktu >=6)
+			time = "Selamat Malam,";
+		}
+		document.writeln("<h2> Hai "+time+" "+namaanda+ "</h2>");
+
+		function Silinder() {
+		var r = document.getElementById('jarjar1').value;
+		var t = document.getElementById('tinggi1').value;
+			if (r == "" || t == "") {
+				alert("Masukan Salah!");
+			}
+		var vol = Math.PI * r * r * t;
+		var panjang = (2 * Math.PI * r * r)+(2*Math.PI*r*t);
+		document.getElementById('intro1').textContent = "Hasil Perhitungan"
+		document.getElementById('sil1').innerHTML="Volume         : " +vol.toFixed(2) + " m³";
+		document.getElementById('sil2').innerHTML="Luas Permukaan : " +panjang.toFixed(2) + " m²";
+		}
+
+		function Kerucut() {
+		var r1 = document.getElementById('jarjar2').value;
+		var s1 = document.getElementById('gapel').value;
+		var t1 = document.getElementById('tinggi2').value;
+		var vol1 = (Math.PI * r1 * r1 *t1)/3;
+		var panjang1 = (Math.PI * r1 * r1) + (Math.PI * r1 * s1);
+		document.getElementById('intro2').textContent = "Hasil Perhitungan";
+		document.getElementById('ker1').innerHTML="Volume         : " +vol1.toFixed(2) + " m³";
+		document.getElementById('ker2').innerHTML="Luas Permukaan : " +panjang1.toFixed(2) + " m²";
+		}
+
+		function Bola() {
+		var r2 = document.getElementById('jarjar3').value;
+		var vol2 = Math.PI * r2 * r2 * r2 * 4/3;
+		var panjang2 = 4 * Math.PI * r2 * r2;
+		document.getElementById('intro3').textContent = "Hasil Perhitungan";
+		document.getElementById('bol1').innerHTML="Volume         : " + vol2.toFixed(2) + " m³";
+		document.getElementById('bol2').innerHTML="Luas Permukaan : " + panjang2.toFixed(2) + " m²";
+		}
+		
+		</script>
+
+</head>
+<body>
+	<h1>3D Kalkulator</h1>
+	<br>
+	<br>
+	<h>Menghitung volume dan luas permukaan dari silinder,kerucut dan bola.</h>
+	
+			<tr><h1>Silinder</h1> 
+				<td>Masukan Jari-jari (Dalam Meter)</td>
+				<td><input type="teks" id="jarjar1"></td>
+			</tr>
+			<p></p>
+			<tr>
+				<td>Masukan Tinggi (Dalam Meter)</td>
+				<td><input type="teks" id="tinggi1"></td>
+			</tr>
+			<p></p>
+			<tr>
+				<input type="button" value=" Hitung! " onclick="Silinder();">
+				
+			</tr>
+			<p></p>
+			<tr>
+				<p><h3 id="intro1"></h3></p>
+				<p><span id="sil1"></span></p>
+				<p><span id="sil2"></span></p>
+			</tr>
+
+			<tr><h1>Kerucut</h1> 
+				<td>Masukan Jari-jari (Dalam Meter)</td>
+				<td><input type="teks" id="jarjar2" required="data kosong"></td>
+			</tr>
+			<p></p>
+			<tr>
+				<td>Masukan Garis Pelukis (Dalam Meter)</td>
+				<td><input type="teks" id="gapel"></td>
+			</tr>
+			<p></p>
+			<tr>
+				<td>Masukan Tinggi (Dalam Meter)</td>
+				<td><input type="teks" id="tinggi2"></td>
+			</tr>
+			<p></p>
+			<tr>
+				<input type="button" value=" Hitung! " onclick="Kerucut();">
+			</tr>
+			<p></p>
+			<tr>
+				<p><h3 id="intro2"></h3></p>
+				<p><span id="ker1"></span></p>
+				<p><span id="ker2"></span></p>
+			</tr>
+		
+
+		
+			<tr><h1>Bola</h1> 
+				<td>Masukan Jari-jari (Dalam Meter)</td>
+				<td><input type="teks" id="jarjar3"></td>
+			</tr>
+			<p></p>
+			<tr>
+				<input type="button" value=" Hitung! " onclick="Bola();">
+			</tr>
+			<tr>
+				<p><h3 id="intro3"></h3></p>
+				<p><span id="bol1"></span></p>
+				<p><span id="bol2"></span></p>
+			
+			</tr>
+		
+</body>
+</html>
